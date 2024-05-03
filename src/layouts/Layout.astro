@@ -1,0 +1,51 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Juan Gallego IV - Software developer</title>
+
+    <style>
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        align-content: center;
+        min-height: 80vh;
+      }
+
+      #top-frame, #bottom-frame {
+        background: black;
+        position: fixed;
+        left: 0; 
+        right: 0;
+        height: 20px;
+      }
+
+      #top-frame { top: 0; }
+      #bottom-frame { bottom: 0; }
+
+      br.responsive {
+        display: none; 
+      }
+
+      @media (min-width: 380px) {
+        br.responsive {
+          display: inline;
+        }
+      }
+    </style>
+	</head>
+	<body>
+    <div class="mx-auto p-2">
+      <div id="top-frame"></div>
+      <div id="bottom-frame"></div>
+
+      <slot />
+    </div>
+  </body>
+</html>
