@@ -13,16 +13,17 @@ const projects = [
 ];
 ---
 
-<section class="mt-4 mb-4 pl-3 sm:w-3/4 md:w-2/3 lg:w-3/5 xl:w-full mx-auto">
-  <h2 class="text-2xl font-bold text-center xl:text-left">Projects</h2>
+<section class="mt-4 mb-4 pl-3 w-96 lg:w-auto mx-auto">
+  <h2 class="text-3xl font-bold">Projects</h2>
 
-  <div class="grid grid-cols-2 gap-4 mt-4">
-    {projects.map((project) => (
-      <div class="border border-dashed border-gray-200 p-3">
-        <h3 class="font-bold">{project.name}</h3>
-        <p class="text-gray-700 mt-2">{project.description}</p>
-        <p class="mt-2"><a href="{project.url}" class="text-blue-500 text-sm">Link</a></p>
-      </div>
-    ))}
-  </div>
+  {projects.map((project) => (
+    <article class="mt-5">
+      <h3 class="text-xl font-bold">
+        <a href="{project.url}">{project.name} →</a>
+      </h3>
+      <p class="text-gray-700 mt-2">
+        {project.description}
+      </p>
+    </article>
+  ))}
 </section>
