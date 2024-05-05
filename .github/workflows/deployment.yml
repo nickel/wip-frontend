@@ -24,7 +24,7 @@ jobs:
 
       - name: 'Build & push image'
         run: |
-          docker build . -e BACKEND_API_URL=${{secrets.BACKEND_API_URL}} \
+          docker build . --build-arg BACKEND_API_URL=${{secrets.BACKEND_API_URL}}  \
             --tag ${{secrets.DOCKER_REGISTRY_HOST}}/${{github.repository}}:latest \
             --tag ${{secrets.DOCKER_REGISTRY_HOST}}/${{github.repository}}:${{ github.sha }}
           docker push ${{secrets.DOCKER_REGISTRY_HOST}}/${{github.repository}}:latest
