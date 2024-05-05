@@ -3,6 +3,8 @@
 # STAGE 0: Build
 FROM node:22.0.0-alpine3.19
 
+ARG BACKEND_API_URL
+
 WORKDIR /home/node
 
 RUN npm install -g pnpm
