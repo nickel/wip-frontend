@@ -8,20 +8,22 @@ const logs = data.logs;
 ---
 
 <Layout>
-  <header class="mt-4">
-    <Logo title="Juan Gallego IV's bitacora" />
-    <p>
-      Avoiding getting lost.
-    </p>
-  </header>
+  <div class="p-4">
+    <header class="mt-4">
+      <Logo title="Juan Gallego IV's bitacora" />
+      <p>
+        Avoiding getting lost.
+      </p>
+    </header>
 
-  <main class="mt-4 pt-4 border-t">
-    <ul>
-      {logs.map((log) => (
-        <li>
-          {log.content}
-        </li>
-      ))}
-    </ul>
-  </main>
+    <main class="mt-4 pt-4 border-t">
+      <ul>
+        {logs.map((log) => (
+          <li>
+            {log.content}
+          </li>
+        ))}
+      </ul>
+    </main>
+  </div>
 </Layout>

@@ -8,27 +8,29 @@ const bookmarks = data.bookmarks;
 ---
 
 <Layout>
-  <header class="mt-4">
-    <Logo title="Juan Gallego IV's bookmarks" />
-    <p>
-      Who knows? Maybe one day I'll need them.
-    </p>
-  </header>
+  <div class="p-4">
+    <header class="mt-4">
+      <Logo title="Juan Gallego IV's bookmarks" />
+      <p>
+        Who knows? Maybe one day I'll need them.
+      </p>
+    </header>
 
-  <main class="mt-4 pt-4 border-t">
-    <ul>
-      {bookmarks.map((bookmark) => (
-        <li>
-          <div class="text-2xl">
-            <a href={bookmark.url} 
-               target="_blank" 
-               rel="nofollow noopener noreferrer">
-              {bookmark.title} →
-            </a>
-          </div>
-          <div class="p-2">{bookmark.description}</div>
-        </li>
-      ))}
-    </ul>
-  </main>
+    <main class="mt-4 pt-4 border-t">
+      <ul>
+        {bookmarks.map((bookmark) => (
+          <li>
+            <div class="text-2xl">
+              <a href={bookmark.url} 
+                 target="_blank" 
+                 rel="nofollow noopener noreferrer">
+                {bookmark.title} →
+              </a>
+            </div>
+            <div class="p-2">{bookmark.description}</div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  </div>
 </Layout>

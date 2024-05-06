@@ -10,17 +10,18 @@ import Links from "../sections/homepage/Links.astro"
     body {
       align-content: center;
       min-height: 80vh;
+      padding: 60px 0px;
     }
   </style>
 
   <div class="flex flex-col lg:flex-row">
-    <div class="flex-1 border-b lg:border-b-0 lg:border-r p-4">
+    <div class="flex-1 border-b lg:border-b-0 lg:border-r pt-4 pb-4">
       <PresentationCard />
     </div>
-    <div class="flex-1 border-b lg:border-b-0 lg:border-r p-4">
+    <div class="flex-1 border-b lg:border-b-0 lg:border-r pt-4 pb-4 pl-4">
       <Projects />
     </div>
-    <div class="flex-1 p-4">
+    <div class="flex-1 pl-4">
       <Links />
     </div>
   </div>

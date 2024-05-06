@@ -9,20 +9,22 @@ const projects = data.projects;
 ---
 
 <Layout>
-  <header class="mt-4">
-    <Logo title="Juan Gallego IV's projects" />
-    <p>
-      My personal projects.
-    </p>
-  </header>
+  <div class="p-4">
+    <header class="mt-4">
+      <Logo title="Juan Gallego IV's projects" />
+      <p>
+        My personal projects.
+      </p>
+    </header>
 
-  <main class="mt-4 pt-4 border-t">
-    <ul>
-      {projects.map((project) => (
-        <li>
-          <Project project={project} />
-        </li>
-      ))}
-    </ul>
-  </main>
+    <main class="mt-4 pt-4 border-t">
+      <ul>
+        {projects.map((project) => (
+          <li>
+            <Project project={project} />
+          </li>
+        ))}
+      </ul>
+    </main>
+  </div>
 </Layout>
