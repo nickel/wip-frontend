@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Logo from "../sections/Logo.astro"
+
+const response = await fetch(`${import.meta.env.BACKEND_API_URL}/api/v1/notes`);
+const data = await response.json();
+const notes = data.notes;
+---
+
+<Layout>
+  <header class="mt-4">
+    <Logo title="Juan Gallego IV's notes" />
+    <p>
+      Talking to myself in the future.
+    </p>
+  </header>
+
+  <main class="mt-4 pt-4 border-t">
+    <ul>
+      {notes.map((note) => (
+        <li>
+          <div class="text-2xl">
+            {note.title}
+          </div>
+          <div class="p-2">{note.content}</div>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>
